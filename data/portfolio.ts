@@ -67,10 +67,10 @@ export const portfolioData: PortfolioData = {
   linkedinUrl: "https://linkedin.com/in/ashish-panchal-dev",
   githubUrl: "https://github.com/ashishpanchal1609",
   summary:
-    "Frontend Developer with 3.5+ years of experience building scalable, high-performance web applications using React.js, Next.js, TypeScript, and Tailwind CSS. Strong experience in SSR, API integration, performance optimization, and modern UI architecture. Proven ability to work in Agile teams and deliver production-ready features.",
+    "Frontend Developer with 4+ years of experience building scalable, high-performance web applications using React.js, Next.js, TypeScript, and Tailwind CSS. Strong experience in SSR, API integration, performance optimization, and modern UI architecture. Proven ability to work in Agile teams and deliver production-ready features.",
   education: {
     degree: "B.E. Information Technology",
-    institution: "Government Engineering College Modasa",
+    institution: "Government Engineering college Modasa",
     duration: "2018/08 – 2022/05",
     grade: "CGPA - 8.09",
     location: "Modasa, Gujarat, India",
@@ -102,6 +102,19 @@ export const portfolioData: PortfolioData = {
     },
   ],
   experience: [
+    {
+      company: "Yodep Solutions",
+      position: "Software Engineer",
+      duration: "2026/01 – Present",
+      location: "Ahmedabad, India",
+      responsibilities: [
+        "Working on a product-based HR ecosystem focused on employee management and workforce workflows.",
+        "Contributing to modules such as employee portals, leave management, pay-condition leave, role-based permissions, and multi-tenant administration.",
+        "Supporting multiple user roles including HR and Tenant Admin, with permission-driven access across different modules.",
+        "Working in an Agile environment with Jira, collaborating with cross-functional teams to deliver scalable and production-ready features.",
+      ],
+      technologies: ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Agile", "Jira"],
+    },
     {
       company: "Nimblechapps",
       position: "Jr Software Engineer",

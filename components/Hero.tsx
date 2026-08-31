@@ -132,7 +132,7 @@ export default function Hero() {
             variants={itemVariants}
             className="text-base sm:text-lg md:text-xl text-text-muted max-w-2xl mb-12 leading-relaxed"
           >
-            I&apos;m a <span className="text-white font-semibold">{portfolioData.title}</span> with 3.5+ years of
+            I&apos;m a <span className="text-white font-semibold">{portfolioData.title}</span> with 4+ years of
             professional experience. I specialize in crafting performant server-side rendered interfaces, fluid UI
             architectures, and robust application flows.
           </motion.p>

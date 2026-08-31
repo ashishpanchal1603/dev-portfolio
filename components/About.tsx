@@ -6,7 +6,7 @@ import { portfolioData } from "../data/portfolio";
 
 export default function About() {
   const stats = [
-    { number: "3.5+", label: "Years Experience" },
+    { number: "4+", label: "Years Experience" },
     { number: "Next.js / React", label: "Core Specialty" },
     { number: "30%", label: "UI Dev Time Cut" },
     { number: "90+", label: "Performance Targets" },
