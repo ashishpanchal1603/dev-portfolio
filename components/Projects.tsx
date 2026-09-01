@@ -72,21 +72,18 @@ export default function Projects() {
                 key={project.id}
                 variants={cardVariants}
                 onClick={() => setSelectedProject(project)}
-                className={`group rounded-3xl bg-zinc-900/30 border border-white/5 hover:border-primary/40 transition-all duration-500 overflow-hidden cursor-pointer relative interactive-card ${
-                  isFeatured ? "lg:col-span-12" : "lg:col-span-6"
-                }`}
+                className={`group rounded-3xl bg-zinc-900/30 border border-white/5 hover:border-primary/40 transition-all duration-500 overflow-hidden cursor-pointer relative interactive-card ${isFeatured ? "lg:col-span-12" : "lg:col-span-6"
+                  }`}
               >
                 {/* Visual Grid Layout for cards */}
                 <div
-                  className={`flex flex-col ${
-                    isFeatured ? "lg:flex-row lg:h-[400px]" : "h-full"
-                  }`}
+                  className={`flex flex-col ${isFeatured ? "lg:flex-row lg:h-[400px]" : "h-full"
+                    }`}
                 >
                   {/* Card Image Area */}
                   <div
-                    className={`relative overflow-hidden shrink-0 ${
-                      isFeatured ? "lg:w-3/5 h-[240px] lg:h-full" : "h-[220px] w-full"
-                    }`}
+                    className={`relative overflow-hidden shrink-0 ${isFeatured ? "lg:w-3/5 h-[240px] lg:h-full" : "h-[220px] w-full"
+                      }`}
                   >
                     <Image
                       src={`/images/${project.image}.jpg`}
@@ -101,9 +98,8 @@ export default function Projects() {
 
                   {/* Card Content Area */}
                   <div
-                    className={`p-6 sm:p-8 flex flex-col justify-between flex-1 ${
-                      isFeatured ? "lg:w-2/5" : ""
-                    }`}
+                    className={`p-6 sm:p-8 flex flex-col justify-between flex-1 ${isFeatured ? "lg:w-2/5" : ""
+                      }`}
                   >
                     <div className="flex flex-col gap-4">
                       {/* Badge / Header */}
@@ -113,7 +109,9 @@ export default function Projects() {
                             Featured Project
                           </span>
                         )}
-                        <span className="text-xs text-text-muted">Case Study</span>
+                        <span className="text-xs text-text-muted font-medium">
+                          {project.category || "Case Study"}
+                        </span>
                       </div>
 
                       <h3 className="text-2xl font-bold text-white tracking-tight group-hover:text-primary transition-colors duration-300">
@@ -143,13 +141,28 @@ export default function Projects() {
                         )}
                       </div>
 
-                      {/* View Action */}
-                      <div className="flex items-center gap-2 text-xs font-semibold text-white tracking-wider uppercase group-hover:text-primary transition-colors duration-300 mt-2">
-                        View Details
-                        <ArrowUpRight
-                          size={14}
-                          className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
-                        />
+                      {/* View Action & Live Demo CTA */}
+                      <div className="flex items-center justify-between gap-2 mt-2 pt-3 border-t border-white/5">
+                        <div className="flex items-center gap-1.5 text-xs font-semibold text-white tracking-wider uppercase group-hover:text-primary transition-colors duration-300">
+                          <span>View Details</span>
+                          <ArrowUpRight
+                            size={14}
+                            className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
+                          />
+                        </div>
+
+                        {project.liveUrl && (
+                          <a
+                            href={project.liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="flex items-center gap-1 text-xs font-semibold text-zinc-300 hover:text-white px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all duration-300 hover:border-white/20 cursor-pointer"
+                          >
+                            <span>Live Demo</span>
+                            <ArrowUpRight size={12} />
+                          </a>
+                        )}
                       </div>
                     </div>
                   </div>
@@ -200,6 +213,13 @@ export default function Projects() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c0c0e] via-[#0c0c0e]/30 to-transparent" />
                 <div className="absolute bottom-6 left-6 sm:left-8 right-6">
+                  {selectedProject.category && (
+                    <div className="mb-2">
+                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-primary text-white uppercase tracking-wider">
+                        {selectedProject.category}
+                      </span>
+                    </div>
+                  )}
                   <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
                     {selectedProject.name}
                   </h3>
@@ -246,6 +266,17 @@ export default function Projects() {
                         {selectedProject.description}
                       </p>
                     </div>
+
+                    {selectedProject.role && (
+                      <div>
+                        <h4 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-2.5">
+                          Role
+                        </h4>
+                        <p className="text-sm sm:text-base text-zinc-300 leading-relaxed font-medium">
+                          {selectedProject.role}
+                        </p>
+                      </div>
+                    )}
 
                     <div>
                       <h4 className="text-sm font-semibold text-zinc-400 uppercase tracking-wider mb-2.5">

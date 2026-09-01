@@ -1,10 +1,12 @@
 export interface Project {
   id: string;
   name: string;
+  category?: string;
+  role?: string;
   shortDescription: string;
   description: string;
-  problemSolved: string;
-  myContribution: string;
+  problemSolved?: string;
+  myContribution?: string;
   technologies: string[];
   keyFeatures: string[];
   liveUrl?: string;
@@ -145,6 +147,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "caretopia",
       name: "CareTopia",
+      category: "Client Platform",
       shortDescription: "A multi-sided healthcare platform for home care, nursing, and physio services.",
       description: "CareTopia is a premium healthcare web platform where clients can post service requests for physical therapy, nursing, and home care, and connect directly with verified healthcare providers in real-time. It features a bidding/offer management flow, in-app chat, and video/voice calls.",
       problemSolved: "Traditional care provider hiring is slow and lacks direct, immediate communication. CareTopia solves this by providing a two-sided platform connecting clients and care providers with immediate bidding, real-time negotiation, and communication tools.",
@@ -164,6 +167,7 @@ export const portfolioData: PortfolioData = {
     {
       id: "fantasy-sports",
       name: "Fantasy Sports Products",
+      category: "Enterprise Product",
       shortDescription: "Real-time fantasy sports web products supporting large active user bases.",
       description: "Fansportiz and CartolaPix are premium fantasy sports products that enable users to create virtual teams, track live match updates, and compete in leagues. The application processes complex state transitions and real-time scores for thousands of concurrent players.",
       problemSolved: "Redux-based state management was causing performance bottlenecks and lag during peak traffic due to complex, nested state updates. Migrating to React Query optimized fetching, caching, rendering cycles, and reduced client state overhead.",
@@ -178,6 +182,34 @@ export const portfolioData: PortfolioData = {
       liveUrl: "https://fansportiz-demo.example.com",
       githubUrl: "https://github.com/ashishpanchal1609/fantasy-sports",
       image: "fantasysports",
+      featured: false,
+    },
+    {
+      id: "panchal-interior",
+      name: "Panchal Interior & Furniture Solutions",
+      category: "Personal Project",
+      role: "Independent Developer",
+      shortDescription:
+        "A full-featured digital web platform built for my father's 15+ year carpentry and turnkey interior design business in Ahmedabad, featuring service showcases, modular estimates, SEO optimization, and WhatsApp lead flows.",
+      description:
+        "Built as a complete digital transformation for my father's 15+ year carpentry and custom furniture manufacturing business in Ahmedabad. The platform elevates traditional craftsmanship into a modern online presence, enabling clients to explore bespoke furniture, modular kitchens, luxury sofas, and turnkey interior services with factory-direct pricing.",
+      problemSolved:
+        "Traditional local carpentry and interior craft rely primarily on word-of-mouth with limited reach against large commercial brands. The business needed a high-performance web platform to establish digital trust, showcase past work, rank for local search queries in Ahmedabad, and provide frictionless quotation & site-visit scheduling for homeowners.",
+      myContribution:
+        "Independently designed and developed the entire web application using Next.js (App Router), React, TypeScript, and Tailwind CSS. Implemented rich local SEO schema (JSON-LD LocalBusiness & FurnitureStore), integrated instant WhatsApp lead generation with structured quotation inquiries, built interactive product & service catalogs, and optimized performance for 100% mobile responsiveness.",
+      technologies: ["Next.js", "React.js", "TypeScript", "Tailwind CSS", "Local SEO (JSON-LD)", "Vercel", "WhatsApp API"],
+      keyFeatures: [
+        "Custom furniture & sofa manufacturing showcase",
+        "Modular kitchen & wardrobe service catalogs",
+        "Instant WhatsApp quotation & lead generation flow",
+        "Free site visit & digital estimate booking system",
+        "Advanced Local SEO with JSON-LD structured schemas",
+        "Mobile-first responsive UI with smooth animations",
+        "Factory-direct pricing calculator & package offers",
+        "Production deployment & edge caching on Vercel",
+      ],
+      liveUrl: "https://panchal-interior.vercel.app/",
+      image: "panchal-interior",
       featured: false,
     },
   ],
