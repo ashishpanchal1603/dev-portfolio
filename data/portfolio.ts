@@ -80,7 +80,7 @@ export const portfolioData: PortfolioData = {
   skills: [
     {
       category: "Frontend",
-      items: ["React.js", "Next.js", "Redux Toolkit", "React Query"],
+      items: ['React.js', 'Next.js', 'Redux Toolkit', 'React Query', 'Zustand'],
     },
     {
       category: "Languages",
@@ -88,7 +88,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       category: "Styling",
-      items: ["Tailwind CSS", "Material UI", "React Bootstrap"],
+      items: ["Tailwind CSS", "Material UI", "React Bootstrap", "Shadcn UI", "Framer Motion"],
     },
     {
       category: "Backend",
@@ -96,11 +96,11 @@ export const portfolioData: PortfolioData = {
     },
     {
       category: "API & Data",
-      items: ["REST APIs", "Axios", "Fetch"],
+      items: ["REST APIs", "GraphQL", "Axios", "Fetch"],
     },
     {
       category: "Tools & Workflow",
-      items: ["Git", "GitHub", "Jira"],
+      items: ["Git", "GitHub", "GitHub Desktop", "Jira", "Agile Method"],
     },
   ],
   experience: [
