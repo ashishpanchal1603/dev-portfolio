@@ -105,7 +105,7 @@ export const portfolioData: PortfolioData = {
     {
       company: "Yodep Solutions",
       position: "Software Engineer",
-      duration: "2026/01 – Present",
+      duration: "Jan 2026 – Present",
       location: "Ahmedabad, India",
       responsibilities: [
         "Working on a product-based HR ecosystem focused on employee management and workforce workflows.",
@@ -118,7 +118,7 @@ export const portfolioData: PortfolioData = {
     {
       company: "Nimblechapps",
       position: "Jr Software Engineer",
-      duration: "2024/01 – 2025/09",
+      duration: "Jan 2024 – jan 2026",
       location: "Ahmedabad, India",
       responsibilities: [
         "Developed reusable React & Tailwind components, reducing UI development time by 30%.",
@@ -131,7 +131,7 @@ export const portfolioData: PortfolioData = {
     {
       company: "Yudiz Solutions Limited",
       position: "JR Software Engineer",
-      duration: "2022/07 – 2024/01",
+      duration: "Jul 2022 – Jan 2024",
       location: "Ahmedabad, India",
       responsibilities: [
         "Revamped the Fantasy Sports product UI, enhancing user experience and engagement.",

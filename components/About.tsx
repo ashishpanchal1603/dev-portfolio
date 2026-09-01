@@ -13,6 +13,7 @@ export default function About() {
   ];
 
   const highlights = [
+    "Contributing to product-based HR ecosystems, multi-tenant workflows, and RBAC modules at Yodep Solutions.",
     "Developed reusable React & Tailwind components, reducing UI development times by 30% at Nimblechapps.",
     "Led complete migrations of complex application state from Redux to React Query.",
     "B.E. in Information Technology with a strong academic background (CGPA: 8.09).",
@@ -113,7 +114,7 @@ export default function About() {
                 <div>
                   <div className="text-xs text-text-muted">Current Role</div>
                   <div className="text-sm font-semibold">
-                    Jr Software Engineer at Nimblechapps
+                    {portfolioData.experience[0]?.position} at {portfolioData.experience[0]?.company}
                   </div>
                 </div>
               </div>
